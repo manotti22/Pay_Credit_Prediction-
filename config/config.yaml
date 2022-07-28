@@ -3,7 +3,8 @@ training_pipeline_config:
   artifact_dir: artifact
 
 data_ingestion_config:
-  dataset_download_url: https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset/banking/banking.tgz
+  #dataset_download_url: "C:\\Users\\HPr\\Pay_Credit_Prediction-\\UCI_Credit_Card.csv"
+  dataset_download_url: https://raw.githubusercontent.com/manotti22/Pay_Credit_Prediction-/main/Credit_Data.csv
   raw_data_dir: raw_data
   tgz_download_dir: tgz_data
   ingested_dir: ingested_data

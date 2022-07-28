@@ -1,3 +1,4 @@
+import shutil
 from banking.entity.config_entity import DataIngestionConfig
 import sys,os
 from banking.exception import BankingException
@@ -36,7 +37,7 @@ class DataIngestion:
             tgz_file_path = os.path.join(tgz_download_dir, banking_file_name)
 
             logging.info(f"Downloading file from :[{download_url}] into :[{tgz_file_path}]")
-            urllib.request.urlretrieve(download_url, tgz_file_path)
+            urllib.request.urlretrieve(download_url,tgz_file_path)
             logging.info(f"File :[{tgz_file_path}] has been downloaded successfully.")
             return tgz_file_path
 
@@ -51,10 +52,12 @@ class DataIngestion:
                 os.remove(raw_data_dir)
 
             os.makedirs(raw_data_dir,exist_ok=True)
+            file_name=os.path.basename(tgz_file_path).split()[0]
 
             logging.info(f"Extracting tgz file: [{tgz_file_path}] into dir: [{raw_data_dir}]")
-            with tarfile.open(tgz_file_path) as banking_tgz_file_obj:
-                banking_tgz_file_obj.extractall(path=raw_data_dir)
+            #with tarfile.open(tgz_file_path) as banking_tgz_file_obj:
+                #banking_tgz_file_obj.extractall(path=raw_data_dir)
+            shutil.copy(tgz_file_path,os.path.join(raw_data_dir,file_name))
             logging.info(f"Extraction completed")
 
         except Exception as e:

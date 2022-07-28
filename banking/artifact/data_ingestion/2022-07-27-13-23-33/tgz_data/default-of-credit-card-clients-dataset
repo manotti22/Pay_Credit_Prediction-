@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Default of Credit Card Clients Dataset | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Default Payments of Credit Card Clients in Taiwan from 2005" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="earth and nature,finance,e-commerce services" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" type="text/javascript">
+    window["pageRequestStartTime"] = 1658924742272;
+    window["pageRequestEndTime"] = 1658924742373;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/datasets/uciml/default-of-credit-card-clients-dataset" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=75916b9cccfe514b1d11" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=b18ee2b25686cabf9bac" />
+  
+    
+ 
+      <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta property="og:url" content="/datasets/uciml/default-of-credit-card-clients-dataset" />
+    <meta property="og:title" content="Default of Credit Card Clients Dataset" />
+    <meta property="og:description" content="Default Payments of Credit Card Clients in Taiwan from 2005" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/306/666/d68d599bfe6995fa5772df1e82c4e83c/dataset-card.jpg" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="aJ+nhp2H9V60RhYuvLrScg==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Default of Credit Card Clients Dataset","description":"## Dataset Information \n\nThis dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005. \n\n## Content\n\nThere are 25 variables:\n\n* **ID**: ID of each client\n* **LIMIT_BAL**: Amount of given credit in NT dollars (includes individual and family/supplementary credit\n* **SEX**: Gender (1=male, 2=female)\n* **EDUCATION**: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)\n* **MARRIAGE**: Marital status (1=married, 2=single, 3=others)\n* **AGE**: Age in years\n* **PAY_0**: Repayment status in September, 2005 (-1=pay duly, 1=payment delay for one month, 2=payment delay for two months, ... 8=payment delay for eight months, 9=payment delay for nine months and above)\n* **PAY_2**: Repayment status in August, 2005 (scale same as above)\n* **PAY_3**: Repayment status in July, 2005 (scale same as above)\n* **PAY_4**: Repayment status in June, 2005 (scale same as above)\n* **PAY_5**: Repayment status in May, 2005 (scale same as above)\n* **PAY_6**: Repayment status in April, 2005 (scale same as above)\n* **BILL_AMT1**: Amount of bill statement in September, 2005 (NT dollar)\n* **BILL_AMT2**: Amount of bill statement in August, 2005 (NT dollar)\n* **BILL_AMT3**: Amount of bill statement in July, 2005 (NT dollar)\n* **BILL_AMT4**: Amount of bill statement in June, 2005 (NT dollar)\n* **BILL_AMT5**: Amount of bill statement in May, 2005 (NT dollar)\n* **BILL_AMT6**: Amount of bill statement in April, 2005 (NT dollar)\n* **PAY_AMT1**: Amount of previous payment in September, 2005 (NT dollar)\n* **PAY_AMT2**: Amount of previous payment in August, 2005 (NT dollar)\n* **PAY_AMT3**: Amount of previous payment in July, 2005 (NT dollar)\n* **PAY_AMT4**: Amount of previous payment in June, 2005 (NT dollar)\n* **PAY_AMT5**: Amount of previous payment in May, 2005 (NT dollar)\n* **PAY_AMT6**: Amount of previous payment in April, 2005 (NT dollar)\n* **default.payment.next.month**: Default payment (1=yes, 0=no)\n\n## Inspiration\n\nSome ideas for exploration:\n\n1. How does the probability of default payment vary by categories of different demographic variables?\n2. Which variables are the strongest predictors of default payment?\n\n## Acknowledgements\n\nAny publications based on this dataset should acknowledge the following: \n\nLichman, M. (2013). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.\n\nThe original dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/default+of+credit+card+clients) at the UCI Machine Learning Repository.","url":"https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset","version":1,"keywords":["subject, earth and nature","subject, people and society, business, finance","subject, people and society, business, e-commerce services"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["306"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Organization","name":"UCI Machine Learning","url":"https://www.kaggle.com/uciml","image":"https://storage.googleapis.com/kaggle-organizations/7/thumbnail.png"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset/download?datasetVersionNumber=1","contentSize":"1025318 bytes"}],"commentCount":16,"dateModified":"2016-11-03T03:39:18.993Z","discussionUrl":"https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset/discussion","alternateName":"Default Payments of Credit Card Clients in Taiwan from 2005","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/306/666/d68d599bfe6995fa5772df1e82c4e83c/dataset-card.jpg","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":16},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":51405},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":623822},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":793}]}</script>
+
+
+  
+    
+
+  
+    
+    
+<script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8J3M_yAX7KFLocPnRStQF55V_CXdQOqUys0jFFPjLijI6Fa773A4VEhjq3mNbckgqf2WKmWCaj6ZiHk4WB_wdE5tMP8g05C8b2ByFwVIaKuDnA',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTg5MjU2NDIsInVzZXJJZCI6MH0.ee-mfxEMyI6asFpWqU-slV2uO4Lsi24ERP1j-97LpXk',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    const decodeUserProperty = function (escapedUserProperty) {
+        escapedUserProperty = escapedUserProperty || "";
+        try {
+            const textVersion = new DOMParser().parseFromString(escapedUserProperty, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserProperty;
+    }
+    Kaggle.Current.userDisplayName = decodeUserProperty(Kaggle.Current.userDisplayNameEscaped);
+    Kaggle.Current.userEmail = decodeUserProperty(Kaggle.Current.userEmailEscaped); 
+</script>
+
+    
+
+<script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="aJ+nhp2H9V60RhYuvLrScg==" src="/static/assets/runtime.js?v=2d47dcc39f25e1ba3145" data-turbolinks-track="reload"></script>
+  <script nonce="aJ+nhp2H9V60RhYuvLrScg==" src="/static/assets/vendor.js?v=1abae0bc5a9d72e7b94f" data-turbolinks-track="reload"></script>
+  <script nonce="aJ+nhp2H9V60RhYuvLrScg==" src="/static/assets/app.js?v=bbfba9083c8634fc4fdc" data-turbolinks-track="reload"></script>
+    <script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="aJ+nhp2H9V60RhYuvLrScg==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="aJ+nhp2H9V60RhYuvLrScg==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":306,"slug":"default-of-credit-card-clients-dataset","title":"Default of Credit Card Clients Dataset","description":"## Dataset Information \n\nThis dataset contains information on default payments, demographic factors, credit data, history of payment, and bill statements of credit card clients in Taiwan from April 2005 to September 2005. \n\n## Content\n\nThere are 25 variables:\n\n* **ID**: ID of each client\n* **LIMIT_BAL**: Amount of given credit in NT dollars (includes individual and family/supplementary credit\n* **SEX**: Gender (1=male, 2=female)\n* **EDUCATION**: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)\n* **MARRIAGE**: Marital status (1=married, 2=single, 3=others)\n* **AGE**: Age in years\n* **PAY_0**: Repayment status in September, 2005 (-1=pay duly, 1=payment delay for one month, 2=payment delay for two months, ... 8=payment delay for eight months, 9=payment delay for nine months and above)\n* **PAY_2**: Repayment status in August, 2005 (scale same as above)\n* **PAY_3**: Repayment status in July, 2005 (scale same as above)\n* **PAY_4**: Repayment status in June, 2005 (scale same as above)\n* **PAY_5**: Repayment status in May, 2005 (scale same as above)\n* **PAY_6**: Repayment status in April, 2005 (scale same as above)\n* **BILL_AMT1**: Amount of bill statement in September, 2005 (NT dollar)\n* **BILL_AMT2**: Amount of bill statement in August, 2005 (NT dollar)\n* **BILL_AMT3**: Amount of bill statement in July, 2005 (NT dollar)\n* **BILL_AMT4**: Amount of bill statement in June, 2005 (NT dollar)\n* **BILL_AMT5**: Amount of bill statement in May, 2005 (NT dollar)\n* **BILL_AMT6**: Amount of bill statement in April, 2005 (NT dollar)\n* **PAY_AMT1**: Amount of previous payment in September, 2005 (NT dollar)\n* **PAY_AMT2**: Amount of previous payment in August, 2005 (NT dollar)\n* **PAY_AMT3**: Amount of previous payment in July, 2005 (NT dollar)\n* **PAY_AMT4**: Amount of previous payment in June, 2005 (NT dollar)\n* **PAY_AMT5**: Amount of previous payment in May, 2005 (NT dollar)\n* **PAY_AMT6**: Amount of previous payment in April, 2005 (NT dollar)\n* **default.payment.next.month**: Default payment (1=yes, 0=no)\n\n## Inspiration\n\nSome ideas for exploration:\n\n1. How does the probability of default payment vary by categories of different demographic variables?\n2. Which variables are the strongest predictors of default payment?\n\n## Acknowledgements\n\nAny publications based on this dataset should acknowledge the following: \n\nLichman, M. (2013). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.\n\nThe original dataset can be found [here](https://archive.ics.uci.edu/ml/datasets/default\u002Bof\u002Bcredit\u002Bcard\u002Bclients) at the UCI Machine Learning Repository.","viewCount":623822,"downloadCount":51405,"scriptCount":369,"topicCount":16,"owner":{"id":7,"imageUrl":"https://storage.googleapis.com/kaggle-organizations/7/thumbnail.png","organization":true,"name":"UCI Machine Learning","organizationMemberCount":10,"profileUrl":"/uciml","slug":"uciml","userTier":"STAFF"},"license":{"id":1,"name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"overview":"Default Payments of Credit Card Clients in Taiwan from 2005","collaboratorList":{"owner":{"groupId":7,"groupMemberCount":10,"profileUrl":"/uciml","thumbnailUrl":"https://storage.googleapis.com/kaggle-organizations/7/thumbnail.png","name":"UCI Machine Learning","slug":"uciml","userTier":"STAFF","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/306/666/d68d599bfe6995fa5772df1e82c4e83c/dataset-cover.jpg","data":{"totalSize":1025318,"isFileset":true,"canSeeDownload":true,"firestorePath":"nqT1mSdQdrzhRBvKIp61/versions/BrvtK1Vj3cbQwVyuduQL","downloadUrl":"/datasets/uciml/uciml/download?datasetVersionNumber=1","versionId":666,"id":306},"voteCount":793,"medalUrl":"/static/images/medals/datasets/goldl@2x.png","downloadUrl":"/datasets/uciml/default-of-credit-card-clients-dataset/download?datasetVersionNumber=1","lastUpdateTime":"2016-11-03T03:39:18.993Z","datasetVersionNumber":1,"creatorDisplayName":"Esther Kim","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/306/666/d68d599bfe6995fa5772df1e82c4e83c/dataset-card.jpg","categories":{"tags":[{"id":7000,"name":"earth and nature","fullPath":"subject \u003E earth and nature","listingUrl":"/datasets?group=public\u0026tagids=7000","description":"","datasetCount":19381,"competitionCount":2,"notebookCount":227,"tagUrl":"/tags/natural-and-physical-sciences","displayName":"Earth and Nature"},{"id":11108,"name":"finance","fullPath":"subject \u003E people and society \u003E business \u003E finance","listingUrl":"/datasets?group=public\u0026tagids=11108","description":"The finance tag covers datasets and kernels about money and investing. If you need to test some new cryptocurrency investment strategies or ward off those pesky credit card fraud enthusiasts, then you\u0027ve come to the right place.","datasetCount":4252,"competitionCount":10,"notebookCount":3566,"tagUrl":"/tags/finance","displayName":"Finance","fontAwesomeIcon":"bar-chart"},{"id":16340,"name":"e-commerce services","fullPath":"subject \u003E people and society \u003E business \u003E e-commerce services","listingUrl":"/datasets?group=public\u0026tagids=16340","description":"","datasetCount":825,"notebookCount":293,"tagUrl":"/tags/e-commerce-services","displayName":"E-Commerce Services"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/uciml/default-of-credit-card-clients-dataset","forumId":1834,"datasetVersionId":666,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":1,"diffType":"VERSIONED"},"@wf": "Datasets.DatasetMaterialDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script>
+<script nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="aJ&#x2B;nhp2H9V60RhYuvLrScg==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
