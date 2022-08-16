@@ -68,28 +68,8 @@ class Pipeline():
          
             # data ingestion
             logging.info("Pipeline starting.")
-
-
             data_ingestion_artifact = self.start_data_ingestion()
-            data_validation_artifact = self.start_data_validation(data_ingestion_artifact=data_ingestion_artifact)
-            data_transformation_artifact = self.start_data_transformation(
-                data_ingestion_artifact=data_ingestion_artifact,
-                data_validation_artifact=data_validation_artifact
-            )
-            model_trainer_artifact = self.start_model_trainer(data_transformation_artifact=data_transformation_artifact)
-
-            model_evaluation_artifact = self.start_model_evaluation(data_ingestion_artifact=data_ingestion_artifact,
-                                                                    data_validation_artifact=data_validation_artifact,
-                                                                    model_trainer_artifact=model_trainer_artifact)
-
-            if model_evaluation_artifact.is_model_accepted:
-                model_pusher_artifact = self.start_model_pusher(model_eval_artifact=model_evaluation_artifact)
-                logging.info(f'Model pusher artifact: {model_pusher_artifact}')
-            else:
-                logging.info("Trained model rejected.")
-            logging.info("Pipeline completed.")
-
-            stop_time = datetime.now()
+            
         except Exception as e:
             raise BankingException(e, sys) from e
 
