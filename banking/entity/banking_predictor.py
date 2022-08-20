@@ -33,7 +33,7 @@ class BankingData:
                  PAY_AMT4    :  float,
                  PAY_AMT5    :  float,
                  PAY_AMT6    :  float,
-                 payment_next_month : int = None
+                 payment_nex_month : int = None
                  ):
 
       try:
@@ -61,7 +61,7 @@ class BankingData:
             self.PAY_AMT4 = PAY_AMT4
             self.PAY_AMT5 = PAY_AMT5
             self.PAY_AMT6 = PAY_AMT6
-            self.payment_next_month = payment_next_month
+            self.payment_nex_month = payment_nex_month
 
       except Exception as e:
            raise BankingException(e, sys) from e

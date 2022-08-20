@@ -28,7 +28,7 @@ MODEL_DIR = os.path.join(ROOT_DIR, SAVED_MODELS_DIR_NAME)
 from banking.logger import get_log_dataframe
 
 BANKING_DATA_KEY = "banking_data"
-PAYEMENT_NEXT_MONTH_KEY = "payement_next_month"
+PAYMENT_NEX_MONTH_KEY = "payment_nex_month"
 
 app = Flask(__name__)
 
@@ -104,7 +104,7 @@ def train():
 def predict():
     context = {
         BANKING_DATA_KEY: None,
-        PAYEMENT_NEXT_MONTH_KEY: None
+        PAYMENT_NEX_MONTH_KEY: None
     }
 
     if request.method == 'POST':
@@ -165,10 +165,10 @@ def predict():
     
          banking_df = banking_data.get_banking_input_data_frame()
          banking_predictor = BankingPredictor(model_dir=MODEL_DIR)
-         payement_next_month = banking_predictor.predict(X=banking_df)
+         payment_nex_month = banking_predictor.predict(X=banking_df)
          context = {
             BANKING_DATA_KEY:  banking_data.get_banking_data_as_dict(),
-            PAYEMENT_NEXT_MONTH_KEY: payement_next_month,
+            PAYMENT_NEX_MONTH_KEY: payment_nex_month,
         }
          return render_template('predict.html', context=context)
     return render_template("predict.html", context=context)
