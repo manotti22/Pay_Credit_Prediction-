@@ -83,7 +83,7 @@ class DataIngestion:
 
             split = StratifiedShuffleSplit(n_splits=1, test_size=0.2, random_state=42)
 
-            for train_index,test_index in split.split(banking_data_frame,banking_data_frame["default.payment.next.month"]):
+            for train_index,test_index in split.split(banking_data_frame,banking_data_frame["payment_next_month"]):
                 strat_train_set = banking_data_frame.loc[train_index].drop(["ID"],axis=1)
                 strat_test_set = banking_data_frame.loc[test_index].drop(["ID"],axis=1)
 

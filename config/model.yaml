@@ -7,14 +7,15 @@ grid_search:
 
 model_selection:
   module_0:
-    class: LogisticRegression
-    module: sklearn.linear_model
+    class: GradientBoostingClassifier
+    module: sklearn.ensemble
     params:
-      fit_intercept: true
+      learning_rate: 0.3
     search_param_grid:
-      fit_intercept:
-      - true
-      - false
+      n_estimators :
+      - 120
+      - 200
+   
 
   module_1:
     class: RandomForestClassifier

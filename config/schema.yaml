@@ -23,7 +23,7 @@ columns:
   PAY_AMT4    :  float
   PAY_AMT5    :  float
   PAY_AMT6    :  float
-  default.payment.next.month: int
+  payment_next_month: int
 
   
 numerical_columns:
@@ -54,4 +54,4 @@ categorical_columns:
   - EDUCATION 
   - MARRIAGE   
 
-target_column:   default.payment.next.month
+target_column:   payment_next_month
