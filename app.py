@@ -28,12 +28,12 @@ MODEL_DIR = os.path.join(ROOT_DIR, SAVED_MODELS_DIR_NAME)
 from banking.logger import get_log_dataframe
 
 BANKING_DATA_KEY = "banking_data"
-DEFAULT_PAYEMENT_NEXT_MONTH_KEY = "payement_next_month"
+PAYEMENT_NEXT_MONTH_KEY = "payement_next_month"
 
 app = Flask(__name__)
 
 
-@app.route('/artifact', defaults={'req_path': 'housing'})
+@app.route('/artifact', defaults={'req_path': 'banking'})
 @app.route('/artifact/<path:req_path>')
 def render_artifact_dir(req_path):
     os.makedirs("banking", exist_ok=True)
@@ -104,7 +104,7 @@ def train():
 def predict():
     context = {
         BANKING_DATA_KEY: None,
-        DEFAULT_PAYEMENT_NEXT_MONTH_KEY: None
+        PAYEMENT_NEXT_MONTH_KEY: None
     }
 
     if request.method == 'POST':
@@ -118,7 +118,7 @@ def predict():
          PAY_2 = float(request.form['PAY_2'])
          PAY_3= float(request.form['PAY_3'])
          PAY_4= float(request.form['PAY_4'])
-         PAY_5= float(request.form['PAY_5'])
+         PAY_5 = float(request.form['PAY_5'])
          PAY_6= float(request.form['PAY_6'])
          BILL_AMT1= float(request.form['BILL_AMT1'])
          BILL_AMT2= float(request.form['BILL_AMT2'])
@@ -129,9 +129,10 @@ def predict():
          PAY_AMT1  =float(request.form[' PAY_AMT1'])
          PAY_AMT2  =float(request.form[' PAY_AMT2'])
          PAY_AMT3  =float(request.form[' PAY_AMT3'])
-         PAY_AMT4 = float(request.form['PAY_AMT4'])
-         PAY_AMT5 = float(request.form['PAY_AMT5'])
-         PAY_AMT6 = float(request.form['PAY_AMT6'])
+         PAY_AMT4  =float(request.form[' PAY_AMT4'])
+         PAY_AMT5  =float(request.form[' PAY_AMT5'])
+         PAY_AMT6  =float(request.form[' PAY_AMT6'])
+         
          
         
          banking_data = BankingData(LIMIT_BAL=LIMIT_BAL, 
@@ -148,15 +149,15 @@ def predict():
                                    BILL_AMT1= BILL_AMT1,
                                    BILL_AMT2= BILL_AMT2,
                                    BILL_AMT3= BILL_AMT3,
-                                   BILL_AMT4 =BILL_AMT4,
+                                   BILL_AMT4= BILL_AMT4,
                                    BILL_AMT5= BILL_AMT5,
-                                   BILL_AMT6 = BILL_AMT6,
+                                   BILL_AMT6= BILL_AMT6,
                                    PAY_AMT1  = PAY_AMT1,
                                    PAY_AMT2  = PAY_AMT2,
                                    PAY_AMT3  = PAY_AMT3,
-                                   PAY_AMT4 = PAY_AMT4,
-                                   PAY_AMT5 = PAY_AMT5,
-                                   PAY_AMT6 = PAY_AMT6,
+                                   PAY_AMT4  = PAY_AMT4,
+                                   PAY_AMT5  = PAY_AMT5,
+                                   PAY_AMT6  = PAY_AMT6,
                                    )
             
             
@@ -167,7 +168,7 @@ def predict():
          payement_next_month = banking_predictor.predict(X=banking_df)
          context = {
             BANKING_DATA_KEY:  banking_data.get_banking_data_as_dict(),
-            DEFAULT_PAYEMENT_NEXT_MONTH_KEY: payement_next_month,
+            PAYEMENT_NEXT_MONTH_KEY: payement_next_month,
         }
          return render_template('predict.html', context=context)
     return render_template("predict.html", context=context)
