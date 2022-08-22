@@ -33,7 +33,7 @@ class BankingData:
                  PAY_AMT4    :  float,
                  PAY_AMT5    :  float,
                  PAY_AMT6    :  float,
-                 payment_nex_month : int = None
+                 payment_nex_month : float = None
                  ):
 
       try:
@@ -129,7 +129,7 @@ class BankingPredictor:
         try:
             model_path = self.get_latest_model_path()
             model = load_object(file_path=model_path)
-            median_house_value = model.predict(X)
-            return median_house_value
+            payment_nex_month = model.predict(X)
+            return payment_nex_month
         except Exception as e:
             raise BankingException(e, sys) from e

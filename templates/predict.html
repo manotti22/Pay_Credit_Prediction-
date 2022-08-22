@@ -2,7 +2,6 @@
 
 {% block head %}
 
-
 <title>Credit Default Estimator</title>
 {% endblock %}
 
@@ -10,7 +9,6 @@
 
 <div class="row">
     <div class="col-md-6 col-sm-12 col-xs-6 col-lg-6">
-
 
         <form action="/predict" method="post">
             <legend>Credit Estimation Form</legend>
@@ -55,7 +53,18 @@
                     
 
                 </select>
-
+            <div class="mb-3">
+                 <label class="form-label">MARRIAGE</label>
+                 <select class="form-control" type="text" name="MARRIAGE" placeholder="Enter a value "
+                  required >
+                    
+                 <option value="<male">
+                        &lt;Single
+                    
+                </option>
+                <option value="female">
+                        Married
+                </option> 
             </div>
             <div class="mb-3">
                 <label class="form-label">AGE</label>
@@ -180,7 +189,6 @@
 
             </tr>
             {% for column,value in context['banking_data'].items() %}
-
 
 
             <tr>

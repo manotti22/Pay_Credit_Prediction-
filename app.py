@@ -110,9 +110,9 @@ def predict():
     if request.method == 'POST':
 
          LIMIT_BAL= float(request.form['LIMIT_BAL'])
-         SEX= request.form['SEX']
-         EDUCATION= request.form['EDUCATION']
-         MARRIAGE = request.form['MARRIAGE']
+         SEX= float(request.form['SEX'])
+         EDUCATION= float(request.form['EDUCATION'])
+         MARRIAGE = float(request.form['MARRIAGE'])
          AGE= float(request.form['AGE'])
          PAY_0= float(request.form['PAY_0'])
          PAY_2 = float(request.form['PAY_2'])
