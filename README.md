@@ -1,6 +1,8 @@
-# Pay_Credit_Prediction-
 
-This is a Classification Project Model to predict if bank Costumer will pay the next credit rat in next month
+
+# 💸Credit Card Default Prediction
+
+Financial threats are displaying a trend about the credit risk of commercial banks as the incredible improvement in the financial industry has arisen. In this way, one of the biggest threats faced by commercial banks is the risk prediction of credit clients. The goal is to predict the probability of credit default based on credit card owner's characteristics and payment history
 
 ### Software and Account Requirement.
 
@@ -54,3 +56,13 @@ To setup CI/CD pipeline in heroku we need 3 information
 HEROKU_EMAIL = ottizoubairi@gmail.com
 HEROKU_API_KEY = <de0f3457-6f3d-44e8-b96c-6ea4984abbe2>
 HEROKU_APP_NAME = credit-prediction
+
+## 📑Documentation
+
+[Detailed Project Report,High Level Document,Low Level Document,Architecture Document,Wireframe Document]
+are in Github Project_Architecture Folder.
+
+## Explanation Video:
+https://youtu.be/w4MpDNJOiEM
+
+
